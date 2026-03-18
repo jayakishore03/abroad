@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 175, 55, 0.15); /* Gold glow border */
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+  }
+
+  .glass-dark {
+    @apply bg-black/80 backdrop-blur-2xl border-b border-[#D4AF37]/20;
+  }
+
+  .premium-gradient-text {
+    background: linear-gradient(to right, #FBF5B7, #D4AF37, #AA771C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .premium-hover {
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(212,175,55,0.15)] hover:border-[#D4AF37]/50;
+  }
+}
+
+body {
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #0A192F, #020C1B, #000511);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
